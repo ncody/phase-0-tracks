@@ -1,0 +1,23 @@
+Elevator:
+If going down:
+	-Push down arrow and wait until elevator arrives
+	-Once doors opens, enter elevator 
+	-Push “*1” button
+	-Exit elevator when the screen lights up with “1” and the elevator announces “first floor”
+	-If elevator stops on a floor other than “1”, remain in elevator
+If going up:
+	-Push up arrow and wait until elevator arrives
+	-Once door opens, enter elevator
+	-Push “13” button
+	-Exit elevator when the screen lights up with “13” and the doors open
+	-If elevator stops on floor other than “13”, remain in elevator
+
+
+Laundry Dryer Algorithm:
+	-Remove clothes from washer and put in dryer with one dryer sheet
+	-Start dryer on normal dry cycle and wait for buzzer
+		-If clothes are wet after buzzer:
+			-close door and restart the dryer
+		-If clothes are dry after buzzer:
+			-take clothes out
+			-fold the clothes and put in bedroom

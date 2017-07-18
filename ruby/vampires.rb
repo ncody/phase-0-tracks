@@ -9,10 +9,15 @@ garlic_bread = gets.chomp
 puts "Would you like to enroll in the company's health insurance?"
 insurance = gets.chomp
 
-if age == (2017 - year_born) && (garlic_bread || insurance == yes)
+if age == (2017 - year_born) && (garlic_bread == "yes" || insurance == "yes")
   puts "Probably not a vampire."
 
-elsif age != (2017 - year_born) && (garlic_bread || insurance == no)
+elsif age != (2017 - year_born) && (garlic_bread == "no" && insurance == "no")
+  puts "Almost certainly a vampire."
+
+elsif age != (2017 - year_born) && (garlic_bread == "no" || insurance == "no")
   puts "Probably a vampire."
+
+
 end
 

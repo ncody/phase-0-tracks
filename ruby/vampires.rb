@@ -24,8 +24,11 @@ while i < employees do
   end
 
 
-  if name == "Tu Fang" || name =="Drake Cula" || allergies == "sunshine"
+  if name == "Tu Fang" || name =="Drake Cula"
     puts "Defintely a vampire."
+
+  elsif allergies == "sunshine"
+    puts "Probably a vampire"
 
   elsif age == (2017 - year_born) && (garlic_bread == "yes" || insurance == "yes")
     puts "Probably not a vampire."

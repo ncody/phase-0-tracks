@@ -16,8 +16,15 @@ while i < employees do
   insurance = gets.chomp
   insurance.downcase!
 
+  allergies = nil
+  until allergies == "done" || allergies == "sunshine" do
+    puts "Do you have allergies? List them one at a time and put done when finished."
+    allergies = gets.chomp
+    allergies.downcase!
+  end
 
-  if name == "Tu Fang" || name =="Drake Cula"
+
+  if name == "Tu Fang" || name =="Drake Cula" || allergies == "sunshine"
     puts "Defintely a vampire."
 
   elsif age == (2017 - year_born) && (garlic_bread == "yes" || insurance == "yes")
@@ -33,6 +40,6 @@ while i < employees do
     puts "Results inconclusive."
 
   end
-  i = i + 1
+  i += 1
 end
 

@@ -11,4 +11,8 @@ insurance = gets.chomp
 
 if age == (2017 - year_born) && (garlic_bread || insurance == yes)
   puts "Probably not a vampire."
+
+elsif age != (2017 - year_born) && (garlic_bread || insurance == no)
+  puts "Probably a vampire."
 end
+

@@ -34,3 +34,46 @@ end
 
 print encrypt ("Amazing Ruby")
 
+secret = encrypt("Amazing Ruby")
+
+#take the first character of the string
+#if it is a space leave it the same.
+#if letter is "a", return "z"
+#Otherwise, figure out the index location of the letter in the alphabet
+#Get the previous letter of the alphabet
+#Store the previous letter
+#Repeat for the next character of the string until the string ends
+#return the stored letters
+
+def decrypt(string)
+  string = string.downcase
+  length = string.length
+  index = 0
+  decrypted_string = ""
+  alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+
+  while index < length
+    letter = string[index]
+
+      if letter == "a"
+        previous_letter = "z"
+
+      elsif letter == " "
+        previous_letter = " "
+
+      else
+        alphabet_index = alphabet.index(letter)
+        new_index = alphabet_index - 1
+        previous_letter = alphabet[new_index]
+      end
+
+    index += 1
+    decrypted_string += previous_letter
+  end
+
+decrypted_string
+end
+
+print decrypt(secret)
+

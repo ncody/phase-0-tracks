@@ -32,7 +32,7 @@ def encrypt(string)
 encrypted_string
 end
 
-print encrypt ("Amazing Ruby")
+#print encrypt ("Amazing Ruby")
 
 secret = encrypt("Amazing Ruby")
 
@@ -75,5 +75,49 @@ def decrypt(string)
 decrypted_string
 end
 
-print decrypt(secret)
+#print decrypt(secret)
 
+#puts encrypt("abc")
+#puts encrypt("zed")
+#puts decrypt("bcd")
+#puts decrypt("afe")
+
+puts decrypt(encrypt("swordfish"))
+#Decrypt switches each letter to the previous letter in the alphabet and then encrypt switches each letter to the next letter in the alphabet. Therefore, the two methods cancel each other out when used together and the return value is the same as the input.
+
+# adding an interface
+# print question asking agent if they want to encrypt or decrypt
+# store the answer
+# convert answer to lowercase
+# check if answer was encrypt or decrypt
+# if yes, move on to next question
+# if no, say "I didn't understand. Please answer with encrypt or decrypt"
+# run loop until YES
+# ask them for the password
+# store the answer
+# If they asked for encrypt:
+# run encrypt method on the password that they gave
+# print the result
+# If they asked for decrypt:
+# run the decrypt method on the password that they gave
+# print the result
+# exit
+puts "Would you like to encrypt or decrypt a password?"
+user_answer = gets.chomp
+user_answer.downcase!
+if user_answer == "no"
+  exit
+end
+until user_answer == "encrypt" || user_answer == "decrypt"
+  puts "I didn't understand. Please answer with 'encrypt' or 'decrypt'"
+  user_answer = gets.chomp
+  user_answer.downcase!
+end
+puts "What's the password? Please enter a password with lowercase letters and spaces only."
+user_password = gets.chomp
+if user_answer == "encrypt"
+  puts "Your encrypted password is: #{encrypt(user_password)}"
+else
+  puts "Your decrypted password is: #{decrypt(user_password)}"
+end
+exit

@@ -4,7 +4,7 @@
 #Ask for decor theme and save answer as string
 #Ask if returning customer, save answer as boolean
 #Print all answers on screen
-#Ask if there is any information that needs to be changed answer either 'no' or what needs to be updated (ask until answer is no)
+#Ask if there is any information that needs to be changed answer either 'no' or what needs to be updated
 #if answer is 'no' exit program
 #if answer is value to update ask for the new answer and save it over the old answer
 #print final answers
@@ -70,9 +70,3 @@ end
  p client_info
 
  exit
-
-
-
-
-
-

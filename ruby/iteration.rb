@@ -37,3 +37,42 @@ numbers.map! do |number|
 end
 puts "After .map!:"
 puts numbers
+
+
+#Release 2
+years = [2017, 2016, 2015, 2014, 2013]
+letters = {
+  a: "first",
+  b: "second",
+  c: "third",
+  d: "fourth",
+  e: "fifth"
+}
+
+#QUESTION 1: ARRAY
+#puts "Array delete:"
+#years.delete_if {|year| year < 2015}
+#puts years
+
+#QUESTION 1: HASH
+#puts "hash delete:"
+#letters.delete_if {|letter, place| letter>= :c}
+#puts letters
+
+#QUESTION 2: ARRAY
+#puts "Array keep:"
+#years.keep_if {|year| year < 2015}
+#puts years
+
+#QUESTION 2: HASH
+#puts "Hash keep:"
+#letters.keep_if {|letter, place| letter >= :c}
+#puts letters
+
+#QUESTION 3: ARRAY
+puts "array:"
+puts years.select {|year| year.even?}
+
+#QUESTION 3: HASH
+puts "Hash:"
+puts letters.select {|letter, place| letter == :a || letter == :e}

@@ -1,0 +1,33 @@
+#contact-info {
+  font-size: .8em;
+}
+.job {
+  background-color: #e9e5dc;
+  padding: 5px;
+  margin-top: 10px;
+}
+.accomplishments {
+  font-size: .8em;
+}
+  /* unvisited link */
+a:link {
+    color: #074379;
+}
+
+/* visited link */
+a:visited {
+    color: #4d394b;
+}
+
+/* mouse over link */
+a:hover {
+    color: #57936c;
+}
+
+/* selected link */
+a:active {
+    color: #e2712c;
+}
+ul li {
+  font-family: monospace;
+}

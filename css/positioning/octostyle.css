@@ -1,0 +1,19 @@
+img{
+    position: absolute;
+}
+.octopus{
+  z-index: 1;
+  margin:10px auto 10px auto;
+  padding-top: 70px;
+  padding-left: 20px;
+}
+.hat{
+  z-index: 2;
+  margin:10px auto 10px auto;
+}
+.glasses{
+  z-index: 2;
+  margin:10px auto 10px auto;
+  padding-top: 170px;
+  padding-left: 60px;
+}

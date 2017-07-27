@@ -7,7 +7,7 @@ puts "What is your name?"
  real_name = gets.chomp
  real_name.downcase!
 
-#reverse_name = real_name.split(' ').reverse.join (' ')
+real_name = real_name.split(' ').reverse.join (' ')
 
 
 def switch(string)

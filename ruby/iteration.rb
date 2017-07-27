@@ -42,11 +42,11 @@ puts numbers
 #Release 2
 years = [2017, 2016, 2015, 2014, 2013]
 letters = {
-  a: "first",
-  b: "second",
-  c: "third",
-  d: "fourth",
-  e: "fifth"
+  a: 1,
+  b: 2,
+  c: 3,
+  d: 4,
+  e: 5
 }
 
 #QUESTION 1: ARRAY
@@ -70,9 +70,17 @@ letters = {
 #puts letters
 
 #QUESTION 3: ARRAY
-puts "array:"
-puts years.select {|year| year.even?}
+#puts "array:"
+#puts years.select {|year| year.even?}
 
 #QUESTION 3: HASH
-puts "Hash:"
-puts letters.select {|letter, place| letter == :a || letter == :e}
+#puts "Hash:"
+#puts letters.select {|letter, place| place.odd?}
+
+#QUESTION 4: ARRAY
+puts "array:"
+puts years.drop_while {|year| year > 2015}
+
+#QUESTION 4: HASH
+puts "hash:"
+puts letters.drop_while {|letter, place| letter != :d}

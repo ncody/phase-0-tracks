@@ -5,7 +5,7 @@
 #Get the next letter of the alphabet
 #Store the next letter
 #Repeat for the next character of the string until the string ends
-#return the stored letters
+#return stored letters
 
 def encrypt(string)
   length = string.length

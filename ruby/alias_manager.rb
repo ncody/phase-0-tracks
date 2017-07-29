@@ -50,4 +50,5 @@ def switch(string)
 new_string
 end
 
-print switch (real_name)
+secret_name = switch (real_name)
+puts secret_name.capitalize

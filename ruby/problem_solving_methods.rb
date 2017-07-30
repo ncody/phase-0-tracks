@@ -1,20 +1,21 @@
 #Release 0
 arr = [12, 52, 3, 14, 7]
 =begin
-def search_array(arr, val)
+def search(arr, num)
   index = 0
-  array_length = arr.length
-  while index < array_length
-    break if arr[index] == val
+  length = arr.length
+  while index < length
+    break if arr[index] == num
     index += 1
   end
-  if array_length == index
+  if length == index
     return nil
   end
 return [index]
 end
 
-p search_array(array, 8)
+p search(arr, 3)
+p search(arr, 12)
 p search(arr, 72)
 =end
 

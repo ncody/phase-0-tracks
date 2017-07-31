@@ -20,12 +20,19 @@ class Puppy
   def sit
     "*sits*"
   end
+
+  def initialize
+    p "Initializing new puppy instance..."
+  end
+
 end
 
 spot = Puppy.new
-p spot.fetch("ball")
-p spot.speak(3)
-p spot.roll_over
-p spot.dog_years(3.5)
-p spot.dog_years(3)
-p spot.sit
+#p spot.fetch("ball")
+#p spot.speak(3)
+#p spot.roll_over
+#p spot.dog_years(3.5)
+#p spot.dog_years(3)
+#p spot.sit
+
+

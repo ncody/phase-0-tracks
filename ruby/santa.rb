@@ -1,4 +1,8 @@
 class Santa
+
+  attr_reader :age, :ethnicity
+  attr_accessor :gender
+
   def speak
    puts "Ho, ho, ho! Haaaappy Holidays!"
   end
@@ -15,32 +19,16 @@ class Santa
     @age = 0
   end
 
-  def gender
-    @gender
-  end
-
-  def age
-    @age
-  end
-
-  def ethnicity
-    @ethnicity
-  end
-
-  def gender=(new_gender)
-    @gender = new_gender
-  end
-
   def celebrate_birthday
     @age = @age+1
     puts "New age: #{@age}"
   end
 
   def get_mad_at(reindeer_name)
-    #p @reindeer_ranking (used to test that it prints the original)
+    p @reindeer_ranking #(used to test that it prints the original)
     place = @reindeer_ranking.index(reindeer_name).to_i
     @reindeer_ranking.insert(-1, @reindeer_ranking.delete_at(place))
-    #p @reindeer_ranking (used to test that it changes the rank)
+    p @reindeer_ranking #(used to test that it changes the rank)
   end
 
 end
@@ -60,7 +48,7 @@ end
  # santas << Santa.new(example_genders[i], example_ethnicities[i])
 #p santas
 
-santas = Santa.new("female", "white")
+#santas = Santa.new("female", "white")
 #puts "Gender:  #{santas.gender}"
 #santas.gender= "male"
 #puts "Gender: #{santas.gender}"

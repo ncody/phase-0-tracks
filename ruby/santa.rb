@@ -57,4 +57,16 @@ end
 #p santas.age
 #p santas.ethnicity
 
-santas.get_mad_at("Prancer")
+#santas.get_mad_at("Prancer")
+
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+#example_genders.length.times do |i|
+ # santas << Santa.new(example_genders[i], example_ethnicities[i])
+#end
+
+#santas = Santa.new(example_genders.sample, example_ethnicities.sample)
+#p santas
+
+santa_list = 8.times.collect{Santa.new(example_genders.sample, example_ethnicities.sample)}
+p santa_list

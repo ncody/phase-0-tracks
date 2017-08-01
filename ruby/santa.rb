@@ -11,12 +11,12 @@ class Santa
     puts "This was a good #{type}!"
   end
 
-  def initialize(gender, ethnicity)
+  def initialize(gender, ethnicity, age)
     puts "Initializing Santa instance..."
     @gender = gender
     @ethnicity = ethnicity
     @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-    @age = 0
+    @age = age
   end
 
   def celebrate_birthday
@@ -25,10 +25,10 @@ class Santa
   end
 
   def get_mad_at(reindeer_name)
-    p @reindeer_ranking #(used to test that it prints the original)
+    #p @reindeer_ranking #(used to test that it prints the original)
     place = @reindeer_ranking.index(reindeer_name).to_i
     @reindeer_ranking.insert(-1, @reindeer_ranking.delete_at(place))
-    p @reindeer_ranking #(used to test that it changes the rank)
+    #p @reindeer_ranking #(used to test that it changes the rank)
   end
 
 end
@@ -61,6 +61,9 @@ end
 
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+example_age = *(1..140)
+
+
 #example_genders.length.times do |i|
  # santas << Santa.new(example_genders[i], example_ethnicities[i])
 #end
@@ -68,5 +71,5 @@ example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer n
 #santas = Santa.new(example_genders.sample, example_ethnicities.sample)
 #p santas
 
-santa_list = 8.times.collect{Santa.new(example_genders.sample, example_ethnicities.sample)}
+santa_list = 2.times.collect{Santa.new(example_genders.sample, example_ethnicities.sample, example_age.sample)}
 p santa_list

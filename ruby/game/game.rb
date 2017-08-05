@@ -17,18 +17,22 @@ attr_reader :word
   end
 
   def check_word(letter)
-    @guess_count += 1
-    if @word[letter] != nil
-      @correct_guesses << letter
-      i = -1
-      index_array = []
+    if @incorrect_guesses.include? letter or @correct_guesses.include? letter
+    puts "you already guessed that"
+    print @word_array.join.to_s
+    puts "\nIncorrect guesses: #{@incorrect_guesses}"
+    elsif
+      @guess_count += 1
+      if @word[letter] != nil
+        @correct_guesses << letter
+        i = -1
+        index_array = []
       while i = @word.index(letter, i+1)
         index_array << i
       end
       index_array.each do |x|
         @word_array[x] = letter
       end
-      return @word_array
       print @word_array.join.to_s
       puts "\nIncorrect guesses: #{@incorrect_guesses}"
     else
@@ -39,7 +43,7 @@ attr_reader :word
   end
 end
 
-=begin
+
 puts "Welcome to the Word Game!"
 puts "User 1, please enter the word for your partner to guess."
 `stty -echo`
@@ -57,7 +61,8 @@ while game.max_guesses > game.guess_count
     puts "You ran out of turns. The word was: #{game.word}"
   end
 end
-=end
+end
+
 
 
 

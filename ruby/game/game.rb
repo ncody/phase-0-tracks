@@ -25,9 +25,15 @@ attr_reader :word
     @incorrect_guesses = []
     @correct_guesses = []
     @max_guesses = word.length * 2
-    hashes = "_" * word.length
-    @word_array = hashes.split("")
-    puts hashes
+    #hashes = "_" * word.length
+    #@word_array = hashes.split("")
+    #puts hashes
+  end
+
+  def hash
+    hashes = "_" * @word.length
+      @word_array = hashes.split("")
+    return hashes
   end
 
   def check_word(letter)
@@ -64,6 +70,7 @@ puts "User 1, please enter the word for your partner to guess."
 word = gets.chomp
 `stty echo`
 game = Game.new(word)
+puts game.hash
 while game.max_guesses > game.guess_count
   puts "\nWhat letter would you like to guess?"
   guess = gets.chomp

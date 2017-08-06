@@ -2,17 +2,16 @@ require_relative 'game'
 
 describe Game do
 =begin
-commented out because this method has to be in initialize in order to make an array of the hashes
-  it "takes the word from initialize and outputs a string with hashes in place of every character" do
-    game = Game.new('dog')
-    expect(game.hash).to eq "___"
-  end
  commented out because you can't run test code on initialize
   it "takes the word from initialize and outputs a string with hashes in place of every character" do
     game = Game.new('dog')
     expect(game.initiaize).to eq "___"
   end
 =end
+  it "takes the word from initialize and outputs a string with hashes in place of every character" do
+    game = Game.new('dog')
+    expect(game.hash).to eq "___"
+  end
 
 #commented out because was funcitioning when added but had to be added to the check word function below
   #it "checks the guessed letter to see if it has already been guessed" do

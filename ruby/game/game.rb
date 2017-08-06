@@ -25,9 +25,6 @@ attr_reader :word
     @incorrect_guesses = []
     @correct_guesses = []
     @max_guesses = word.length * 2
-    #hashes = "_" * word.length
-    #@word_array = hashes.split("")
-    #puts hashes
   end
 
   def hash

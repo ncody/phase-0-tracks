@@ -1,5 +1,6 @@
-//create a function that takes an array as the parameter
-//the array will be broken up into individual words and find the length of each word
+//create a function that takes a list as the parameter
+//the function will find the length of each element in the list
+//it will print out the element with the longest length
 
 
 function sort(array) {
@@ -13,6 +14,21 @@ function sort(array) {
     }
     return word;
 }
+
+
+
+function length_string(x) {
+  var word = "";
+  var alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+  for (var i = 0; i < x; i++)
+    word += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+
+  return word;
+}
+
+console.log(length_string(6))
+console.log(length_string(7))
 
 console.log(sort(["elephant", "hello", "dog"]))
 console.log(sort(["hello","elephant", "dog"]))

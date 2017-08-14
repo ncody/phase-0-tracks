@@ -44,7 +44,8 @@ function length_string(x) {
 console.log(length_string(6))
 console.log(length_string(7))
 
-
+//I can't figure out how to make my function say true if the matching key-value pair are not at the same index in the object (example commented out below results in false even though both objects contain a: "dog")
+//console.log(match({a: "dog", c: "cow"}, {d: "dog", a: "dog"}))
 console.log(match({a: "dog"}, {a: "dog"}))
 console.log(match({a: "bird"}, {c: "dog"}))
 

@@ -16,19 +16,37 @@ function sort(array) {
 }
 
 
+function match(first, second) {
+  for (key in first) {
+    var match_first = (key, first[key])
+  }
+  for (key in second) {
+    var match_second = (key, second[key])
+}
+  if (match_first != match_second) {
+    return false;
+  }
+  else {
+    return true;
+  }
+}
 
 function length_string(x) {
   var word = "";
   var alphabet = "abcdefghijklmnopqrstuvwxyz";
 
-  for (var i = 0; i < x; i++)
+  for (var i = 0; i < x; i++){
     word += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-
+  }
   return word;
 }
 
 console.log(length_string(6))
 console.log(length_string(7))
+
+
+console.log(match({a: "dog"}, {a: "dog"}))
+console.log(match({a: "bird"}, {c: "dog"}))
 
 console.log(sort(["elephant", "hello", "dog"]))
 console.log(sort(["hello","elephant", "dog"]))

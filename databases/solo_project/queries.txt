@@ -36,3 +36,12 @@
 1|Spot|3|true|1
 3|Bailey|1|false|2
 4|Harry|4|true|1
+
+RELEASE 3: JOINS
+1. I believe there are 4 different types of joins in SQL. Each one produces a slightly different input. They are: inner join, left join, right join, and full join. Inner join gives you the matching values from the two tables. Full join, gives you all the values of both tables. Left and right, give you the inner join as well as one of the complete tables (the left or right respectively) 
+2. inner join example:
+-command: SELECT dogs.name, dogs.age, clinics.clinic FROM dogs INNER JOIN clinics ON dogs.clinic_id = clinics.id;
+-output:
+Spot|3|Paws
+Bailey|1|Anti-Cruelty Society
+Harry|4|Paws

@@ -1,6 +1,8 @@
 =begin
 Create a database that stores grocery items and quantity wanted
 Create a method to add a new item with a quantity
+Create a method to delete an item
+Create a method to update the quantity of an existing item
 =end
 
 require 'sqlite3'
@@ -19,20 +21,45 @@ SQL
 
 db.execute(create_table)
 #db.execute("INSERT INTO groceries (item, quantity) VALUES ('Granola Bars', 4)")
-#db.execute("INSERT INTO groceries (item, quantity) VALUES ('Apples', 3)")
 
-=begin
 def add_item(db, item, quantity)
   db.execute("INSERT INTO groceries (item, quantity) VALUES (?, ?)", [item, quantity])
 end
-=end
 
 
 
 
-
+#add_item(db, "Watermelon", 1)
+#add_item(db, "Apples", 4)
+puts" Welcome to your grocery list! \nYour grocery list currently includes:"
 groceries = db.execute("SELECT * FROM groceries")
 # groceries is currently an array (with each item quantity an array within the array)
+puts "--------------"
 groceries.each do |grocery|
  puts "#{grocery['item']}: #{grocery['quantity']}"
 end
+puts "--------------"
+
+new_item = nil
+until new_item == "no" do
+puts "Would you like to add a new item?"
+new_item = gets.chomp
+  if new_item == "no"
+    break
+  else
+  puts "What is the item?"
+  item = gets.chomp
+  puts "What is the quantity?"
+  quantity = gets.chomp.to_i
+  add_item(db, item, quantity)
+end
+end
+
+puts "Final grocery list:"
+puts "--------------"
+groceries = db.execute("SELECT * FROM groceries")
+groceries.each do |grocery|
+  puts "#{grocery['item']}: #{grocery['quantity']}"
+end
+puts "--------------"
+

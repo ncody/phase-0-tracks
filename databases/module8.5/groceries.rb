@@ -1,8 +1,8 @@
 =begin
 Create a database that stores grocery items and quantity wanted
 Create a method to add a new item with a quantity
-Create a method to delete an item
-Create a method to update the quantity of an existing item
+Let user enter as many items as wanted
+Print out the final grocery list
 =end
 
 require 'sqlite3'
@@ -54,6 +54,7 @@ new_item = gets.chomp
   add_item(db, item, quantity)
 end
 end
+
 
 puts "Final grocery list:"
 puts "--------------"

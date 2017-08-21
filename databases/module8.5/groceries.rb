@@ -38,8 +38,6 @@ end
 puts "--------------"
 end
 
-
-
 #add_item(db, "Watermelon", 1)
 #add_item(db, "Apples", 4)
 puts "Welcome to your grocery list! \nYour grocery list currently includes:"

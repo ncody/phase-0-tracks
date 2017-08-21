@@ -2,7 +2,7 @@
 Create a database that stores grocery items and quantity wanted
 Create a method to add a new item with a quantity
 Let user enter as many items as wanted
-Print out the final grocery list in easy to read list
+Print out the final grocery list
 =end
 
 require 'sqlite3'
@@ -20,11 +20,13 @@ SQL
 
 
 db.execute(create_table)
-#db.execute("INSERT INTO groceries (item, quantity) VALUES ('Granola Bars', 5)")
+#db.execute("INSERT INTO groceries (item, quantity) VALUES ('Granola Bars', 4)")
+
 
 def add_item(db, item, quantity)
   db.execute("INSERT INTO groceries (item, quantity) VALUES (?, ?)", [item, quantity])
 end
+
 
 
 
@@ -41,7 +43,8 @@ end
 #add_item(db, "Watermelon", 1)
 #add_item(db, "Apples", 4)
 
-puts "Welcome to your grocery list! \nYour grocery list currently includes:"
+
+puts" Welcome to your grocery list! \nYour grocery list currently includes:"
 print_list(db)
 
 new_item = nil
@@ -61,4 +64,5 @@ end
 
 puts "Final Grocery List:"
 print_list(db)
+
 

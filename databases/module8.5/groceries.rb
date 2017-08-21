@@ -2,7 +2,7 @@
 Create a database that stores grocery items and quantity wanted
 Create a method to add a new item with a quantity
 Let user enter as many items as wanted
-Print out the final grocery list
+Print out the final grocery list in easy to read list
 =end
 
 require 'sqlite3'

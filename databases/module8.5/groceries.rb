@@ -43,12 +43,12 @@ puts "--------------"
 new_item = nil
 until new_item == "no" do
 puts "Would you like to add a new item?"
-new_item = gets.chomp
+new_item = gets.chomp.downcase
   if new_item == "no"
     break
   else
   puts "What is the item?"
-  item = gets.chomp
+  item = gets.chomp.capitalize
   puts "What is the quantity?"
   quantity = gets.chomp.to_i
   add_item(db, item, quantity)

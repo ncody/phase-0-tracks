@@ -22,6 +22,7 @@ SQL
 db.execute(create_table)
 #db.execute("INSERT INTO groceries (item, quantity) VALUES ('Granola Bars', 4)")
 
+
 def add_item(db, item, quantity)
   db.execute("INSERT INTO groceries (item, quantity) VALUES (?, ?)", [item, quantity])
 end
@@ -29,16 +30,22 @@ end
 
 
 
-#add_item(db, "Watermelon", 1)
-#add_item(db, "Apples", 4)
-puts" Welcome to your grocery list! \nYour grocery list currently includes:"
-groceries = db.execute("SELECT * FROM groceries")
-# groceries is currently an array (with each item quantity an array within the array)
+def print_list(db)
+  puts "Grocery list:"
 puts "--------------"
+groceries = db.execute("SELECT * FROM groceries")
 groceries.each do |grocery|
- puts "#{grocery['item']}: #{grocery['quantity']}"
+  puts "#{grocery['item']}: #{grocery['quantity']}"
 end
 puts "--------------"
+end
+
+#add_item(db, "Watermelon", 1)
+#add_item(db, "Apples", 4)
+
+
+puts" Welcome to your grocery list! \nYour grocery list currently includes:"
+print_list(db)
 
 new_item = nil
 until new_item == "no" do
@@ -55,12 +62,7 @@ new_item = gets.chomp.downcase
 end
 end
 
+puts "Final Grocery List:"
+print_list(db)
 
-puts "Final grocery list:"
-puts "--------------"
-groceries = db.execute("SELECT * FROM groceries")
-groceries.each do |grocery|
-  puts "#{grocery['item']}: #{grocery['quantity']}"
-end
-puts "--------------"
 

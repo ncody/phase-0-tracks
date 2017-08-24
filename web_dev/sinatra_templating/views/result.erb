@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Result</title>
+</head>
+<body>
+<h1>Search Result</h1>
+<p>Results:</p>
+<ul>
+    <% @student.each do |student| %>
+      <li>Name: <%= student['name'] %></li>
+      <li>Age: <%= student['age'] %></li>
+      <li>Campus: <%= student['campus']%></li>
+    <% end %>
+</body>
+</html>
